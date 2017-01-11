@@ -1,10 +1,12 @@
 # real_estate
 Download ACRIS database and upload to MySQL/MariaDB with multi-threading
 
-Usage:
+# Usage:
+
 python3 acris_data.py
 
-Optional arguments:
+
+# Optional arguments:
 
 --reinit: Drop table/re-create using schema
 
