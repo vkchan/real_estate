@@ -1,0 +1,18 @@
+CREATE INDEX crfn ON acris_real_property_master(crfn(20));
+CREATE INDEX crfn ON acris_personal_property_master(crfn(20));
+CREATE INDEX crfn ON acris_real_property_references(crfn(20));
+CREATE INDEX crfn ON acris_personal_property_references(crfn(20));
+CREATE INDEX 'name' ON acris_real_property_parties('name'(40));
+CREATE INDEX addr ON acris_real_property_parties(addr1(40), addr2(40));
+CREATE INDEX city ON acris_real_property_parties(city(15));
+CREATE INDEX zip ON acris_real_property_parties(zip(5));
+CREATE INDEX 'name' ON acris_personal_property_parties('name'(40));
+CREATE INDEX addr ON acris_personal_property_parties(addr1(40), addr2(40));
+CREATE INDEX city ON acris_personal_property_parties(city(15));
+CREATE INDEX zip ON acris_personal_property_parties(zip(5));
+CREATE INDEX bble ON acris_real_property_legals(borough, BLOCK, lot, easement);
+CREATE INDEX addr ON acris_real_property_legals(street_number(10), street_Name(40), addr_unit(5));
+CREATE INDEX bble ON acris_personal_property_legals(borough, 'block', lot, easement);
+CREATE INDEX addr ON acris_personal_property_legals(street_number(10), street_Name(40), addr_unit);
+CREATE INDEX document_id ON acris_real_property_remarks;
+CREATE INDEX document_id ON acris_personal_property_remarks;
